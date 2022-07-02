@@ -1,7 +1,7 @@
-package com.formacionbdi.springboot.app.productos.models.service;
+package com.formacionbdi.springboot.app.productos.springbootservicioproductos.models.service;
 
-import com.formacionbdi.springboot.app.productos.models.dao.ProductoDao;
-import com.formacionbdi.springboot.app.productos.models.entity.Producto;
+import com.formacionbdi.springboot.app.productos.springbootservicioproductos.models.dao.ProductoDao;
+import com.formacionbdi.springboot.app.productos.springbootservicioproductos.models.entity.Producto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
