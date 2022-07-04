@@ -19,6 +19,9 @@ public class Producto implements Serializable {
   private String nombre;
   private Double precio;
 
+  @Transient
+  private Integer port;
+
   @Column(name = "create_at")
   @Temporal(TemporalType.DATE)
   private Date createAt;
