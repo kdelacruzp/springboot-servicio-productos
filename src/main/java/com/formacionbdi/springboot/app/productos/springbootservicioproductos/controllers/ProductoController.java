@@ -27,6 +27,7 @@ public class ProductoController {
   @GetMapping("/listar")
   public List<Producto> listar() {
     return productoService.findAll().stream().map(p -> {
+      //p.setPort(Integer.parseInt(environment.getProperty("local.server.port")));
       p.setPort(port);
       return p;
     }).collect(Collectors.toList());
@@ -37,6 +38,12 @@ public class ProductoController {
     Producto producto = productoService.findById(id);
     //producto.setPort(Integer.parseInt(environment.getProperty("local.server.port")));
     producto.setPort(port);
+
+    try {
+      Thread.sleep(2000L);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
     return producto;
   }
 }
